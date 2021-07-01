@@ -10,6 +10,7 @@ namespace XpoBulkLoad
         [SetUp]
         public void Setup()
         {
+            //https://docs.devexpress.com/XPO/DevExpress.Xpo.Session._methods
             string conn = DevExpress.Xpo.DB.AccessConnectionProvider.GetConnectionString("TestDb.mdb");
             dl = XpoDefault.GetDataLayer(conn, DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
             using (Session session = new Session(dl))
